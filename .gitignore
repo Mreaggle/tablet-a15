@@ -1,0 +1,36 @@
+# Dados pessoais e cópias privadas
+fotos-camera/
+capturas-diagnostico/
+DCIM/
+backups/
+android-inventory.txt
+IMG_*.jpg
+IMG_*.jpeg
+IMG_*.heic
+VID_*.mp4
+
+# Chaves, credenciais e arquivos de configuração locais
+.signing/
+.dollmaker-signing/
+*.jks
+*.keystore
+*.p12
+*.pkcs12
+*.pem
+*.key
+*.pass
+.env
+.env.*
+
+# Binários externos e saídas de build
+*.img
+*.img.xz
+*.cab
+*.apk
+*.idsig
+*.dex
+node_modules/
+dist/
+build/
+__pycache__/
+backup-local/

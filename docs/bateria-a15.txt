@@ -1,0 +1,65 @@
+Bateria do tablet A15
+Plano de ajustes persistentes e reversíveis
+Estado deste trabalho: diagnóstico somente leitura. Nenhum ajuste aplicado.
+
+Estado de referência
+- SLSM A15, placa tb8735ba1_bsp, Android 9 Vanilla.
+- Brilho manual em 102 de 255. Tempo de tela de 60 segundos.
+- A tela está configurada para permanecer ligada quando conectada à alimentação.
+  A chave stay_on_while_plugged_in tem valor 7.
+- Wi-Fi ligado. Busca de Wi-Fi em segundo plano já desativada. Bluetooth ligado.
+- Economia de bateria desativada. Toque duplo para acordar e feedback tátil ativos.
+- USB ADB ativo, com o ajuste de inicialização aplicado. Tela 1024×600 com
+  densidade configurada em 160 dpi.
+- A bateria indicava 100% enquanto o USB fornecia energia. O sistema informou
+  zero para tensão e temperatura. Essa leitura não serve para estimar autonomia
+  ou avaliar a condição da bateria.
+
+Primeira etapa
+1. Reduzir o tempo de tela de 60 para 30 segundos.
+2. Testar brilho manual em 75 de 255, ajustando conforme a leitura em casa.
+3. Separar a economia em bateria da opção de manter acordado enquanto carrega.
+   Preservar o valor 7 nessa primeira etapa para manter o fluxo de depuração USB.
+   Avaliar a opção 0 separadamente, testando ADB após bloquear, desbloquear e
+   reconectar o cabo.
+
+Comandos da primeira etapa, para uso futuro
+Use o ADB já configurado no seu computador. Confirme a placa e anote os
+valores atuais antes de aplicar os ajustes.
+
+  adb shell getprop ro.product.board
+  adb shell settings get system screen_off_timeout
+  adb shell settings get system screen_brightness
+  adb shell settings put system screen_off_timeout 30000
+  adb shell settings put system screen_brightness 75
+
+Valores de reversão observados nesta sessão
+  adb shell settings put system screen_off_timeout 60000
+  adb shell settings put system screen_brightness 102
+  adb shell settings put global stay_on_while_plugged_in 7
+
+Ajustes condicionais
+- Bluetooth desligado pela interface se o tablet estiver sem acessórios
+  Bluetooth. Verificar o áudio usado pela criança antes de mudar.
+- No StreamTube, medir um vídeo em 480p e testar a reprodução dos Shorts.
+  Considerar esse limite apenas se a imagem e a reprodução continuarem boas.
+- Considerar economia de bateria abaixo de 15% em um teste separado. Ela muda
+  o comportamento em segundo plano e pode afetar o desempenho. Evitar ativação
+  contínua enquanto o requisito for manter a experiência atual.
+- Preservar Wi-Fi, USB, densidade, navegação e ajustes de software já feitos.
+  Manter a política padrão de CPU e Doze e evitar mudanças em partições ou
+  restrições globais aos apps.
+
+Verificação e medida
+- Validar o brilho e o desligamento por inatividade na tela, com o USB fora.
+- Conferir Voltar, Início e Recentes, os atalhos e os jogos offline.
+- Testar StreamTube com vídeo comum e Shorts. Testar o atalho laranja como
+  alternativa. Confirmar áudio, pausa e retorno à tela inicial.
+- Verificar o ADB e os valores das chaves após reinício normal.
+- Comparar sessões desconectadas com o mesmo Wi-Fi, volume e conteúdo.
+  Medir uma sessão de vídeo e uma de repouso, anotando duração e percentual
+  inicial e final. Relatar o ganho só depois da medição.
+
+Referência
+Google, como aproveitar ao máximo a duração da bateria do Android
+https://support.google.com/android/answer/7664692?hl=pt-BR

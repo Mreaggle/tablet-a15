@@ -1,0 +1,74 @@
+--- a/assets/public/games/simon/index.html
++++ b/assets/public/games/simon/index.html
+@@ -41,6 +41,11 @@
+   .sm-top { display: flex; justify-content: center; align-items: center; gap: var(--s-2); flex-wrap: wrap; }
+   .sm-status { min-height: 1.6em; font-weight: 700; color: var(--c-text-dim); text-align: center; }
+   .sm-shake { animation: sm-shake 360ms var(--ease); }
++  /* The board lives in a square .sm-box, including on older Android WebViews. */
++  @supports not (aspect-ratio: 1) {
++    .sm-board { height: 100%; }
++    .sm-hub { height: 34%; }
++  }
+   @keyframes sm-shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+ </style>
+ </head>
+--- a/assets/public/games/lights/index.html
++++ b/assets/public/games/lights/index.html
+@@ -28,6 +28,9 @@
+   .lt-side > .ch-btn { align-self: center; width: auto; }
+   .lt-status { min-height: 1.6em; font-weight: 700; color: var(--c-text-dim); text-align: center; font-variant-numeric: tabular-nums; }
+   @media (prefers-reduced-motion: reduce) { :root:not([data-motion="on"]) .lt-cell { transition: none; } }
++  @supports not (aspect-ratio: 1) {
++    .lt-board { height: 100%; }
++  }
+ </style>
+ </head>
+ <body>
+--- a/assets/public/games/pipes/index.html
++++ b/assets/public/games/pipes/index.html
+@@ -54,6 +54,9 @@
+   :root[data-theme="dark"] .pw-stars { color: var(--game-text-dark, var(--game, var(--c-accent))); }
+   @media (prefers-reduced-motion: reduce) { :root:not([data-motion="on"]) .pw-cell svg.pw-pipe, :root:not([data-motion="on"]) .pw-pipe .w { transition: none; } :root:not([data-motion="on"]) .pw-cell--bad, :root:not([data-motion="on"]) .pw-board--done .pw-cell .w { animation: none; }
+     :root:not([data-motion="on"]) .pw-pipe .cur { display: none; } }
++  @supports not (aspect-ratio: 1) {
++    .pw-board { height: 100%; }
++  }
+ </style>
+ </head>
+ <body>
+--- a/assets/public/games/sums/index.html
++++ b/assets/public/games/sums/index.html
+@@ -44,6 +44,9 @@
+   .su-tool:focus-visible { outline: 3px solid var(--c-accent); outline-offset: 2px; }
+   .su-status { min-height: 1.6em; font-weight: 700; color: var(--c-text-dim); text-align: center; font-variant-numeric: tabular-nums; }
+   @media (prefers-reduced-motion: reduce) { :root:not([data-motion="on"]) .su-cell, :root:not([data-motion="on"]) .su-t, :root:not([data-motion="on"]) .su-tool { transition: none; } }
++  @supports not (aspect-ratio: 1) {
++    .su-board { height: 100%; }
++  }
+ </style>
+ </head>
+ <body>
+--- a/assets/public/games/territories/index.html
++++ b/assets/public/games/territories/index.html
+@@ -45,6 +45,9 @@
+   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tr-stars { color: var(--game-text-dark, var(--game, var(--c-accent))); } }
+   :root[data-theme="dark"] .tr-stars { color: var(--game-text-dark, var(--game, var(--c-accent))); }
+   @media (prefers-reduced-motion: reduce) { :root:not([data-motion="on"]) .tr-cell--bad, :root:not([data-motion="on"]) .tr-board--done .tr-animal { animation: none; } }
++  @supports not (aspect-ratio: 1) {
++    .tr-board { height: 100%; }
++  }
+ </style>
+ </head>
+ <body>
+--- a/assets/public/games/doubles/index.html
++++ b/assets/public/games/doubles/index.html
+@@ -91,6 +91,9 @@
+   .db-gain { position: absolute; left: 0; right: 0; top: 0; font-weight: 800; color: var(--game-text, var(--c-accent)); pointer-events: none; }
+   .db-top { display: flex; justify-content: center; }
+   .db-status { min-height: 1.6em; font-weight: 700; color: var(--c-text-dim); text-align: center; }
++  @supports not (aspect-ratio: 1) {
++    .db-board { height: 100%; }
++  }
+ </style>
+ </head>
+ <body>

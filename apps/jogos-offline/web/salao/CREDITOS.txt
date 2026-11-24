@@ -1,0 +1,10 @@
+Salão A15
+Adaptação para Android de Hair Salon, criado por jsola.
+Projeto original https://scratch.mit.edu/projects/41409188/
+Publicado em 2015. O projeto original identifica a autoria da arte e do código
+e permite remix com crédito. A licença aplicável a esses materiais originais é
+Creative Commons Atribuição-CompartilhaIgual 2.0.
+https://creativecommons.org/licenses/by-sa/2.0/
+Modificações na adaptação: remoção do áudio, ajustes de compatibilidade
+para Android 9, inicialização automática e ícone.
+O HTML inclui os avisos de licença do TurboWarp, Scratch e core-js.

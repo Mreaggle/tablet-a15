@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">A15 em jogo</title>
+  <desc id="desc">Capa em tons de violeta com um tablet exibindo quatro ícones de jogos.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#15182b"/><stop offset="1" stop-color="#332647"/>
+    </linearGradient>
+    <linearGradient id="screen" x2="1" y2="1">
+      <stop stop-color="#333b61"/><stop offset="1" stop-color="#242b49"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#d2c4f1" opacity=".2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="420" rx="32" fill="url(#bg)"/>
+  <path d="M660 0H1168a32 32 0 0 1 32 32v356a32 32 0 0 1-32 32H660z" fill="url(#dots)"/>
+  <circle cx="918" cy="208" r="164" fill="#493f6b" opacity=".55"/>
+  <circle cx="918" cy="208" r="186" fill="none" stroke="#a398ce" stroke-opacity=".32" stroke-dasharray="5 9"/>
+  <g font-family="Verdana, Arial, sans-serif">
+    <text x="65" y="190" fill="#fff" font-size="88" font-weight="bold" letter-spacing="-5">A15 em jogo</text>
+    <text x="70" y="251" fill="#eee8fa" font-size="29">Android leve para um tablet de 7″</text>
+    <text x="70" y="295" fill="#b8efd9" font-size="25">Jogos offline e atalhos fáceis de reconhecer</text>
+  </g>
+  <g transform="translate(729 92) rotate(-5 193 116)">
+    <rect x="5" y="12" width="389" height="252" rx="30" fill="#0b0d19" opacity=".42"/>
+    <rect width="389" height="252" rx="30" fill="#151827" stroke="#b3a5d9" stroke-width="2"/>
+    <rect x="15" y="15" width="359" height="222" rx="21" fill="url(#screen)"/>
+    <circle cx="382" cy="127" r="3" fill="#7b87ab"/>
+    <g transform="translate(44 65)">
+      <rect width="61" height="63" rx="17" fill="#b6f0d9"/>
+      <path d="M17 38c0-8 4-15 9-15h11c5 0 9 7 9 15 0 7-4 7-8 3l-3-3h-8l-3 3c-4 4-7 4-7-3z" fill="none" stroke="#204f49" stroke-width="3"/>
+      <path d="M27 27v8m-4-4h8m6-2h1m3 5h1" stroke="#204f49" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(124 65)">
+      <rect width="61" height="63" rx="17" fill="#eec3f8"/>
+      <path d="M22 16l-6 7 7 6 2-3 1 7-8 12h25l-8-12 1-7 2 3 7-6-6-7h-4a5 5 0 0 1-10 0z" fill="#663777"/>
+    </g>
+    <g transform="translate(204 65)">
+      <rect width="61" height="63" rx="17" fill="#ffd7af"/>
+      <g fill="none" stroke="#763c2d" stroke-width="3" stroke-linecap="round">
+        <circle cx="22" cy="23" r="5"/><circle cx="22" cy="39" r="5"/>
+        <path d="M26 27l16 12m-16-4l16-12"/>
+      </g>
+    </g>
+    <g transform="translate(284 65)">
+      <rect width="61" height="63" rx="17" fill="#bfd6ff"/>
+      <path d="M43 18 27 33l-2 8 8-2 15-16z" fill="#315387"/>
+      <path d="M26 35c-9-3-6 7-13 10 12 3 17 0 17-6z" fill="#315387"/>
+    </g>
+    <g stroke="#d8daea" stroke-width="2.5" fill="none">
+      <path d="M115 210l8-6v12z"/><circle cx="194" cy="210" r="6"/><rect x="264" y="204" width="12" height="12" rx="2"/>
+    </g>
+  </g>
+</svg>

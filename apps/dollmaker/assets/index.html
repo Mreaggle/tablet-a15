@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/android.css">
+    <title>DollMaker</title>
+</head>
+<body>
+    <div class="dollsModal" id="modal">
+        <div id="modalContent">
+            <ul id="dollsUl">
+                <li class="modalCard" id="deleteAllDollsCard"><span>Apagar todas as bonecas</span></li>
+                <li class="modalCard" id="createNewDollCard"><span>Nova boneca</span></li>
+            </ul>
+            <button id="saveDollsBtn">Salvar bonecas</button>
+        </div>
+    </div>
+    <div id="body">
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
+            <button id="switchDollBtn">Bonecas</button>
+            <button id="toggleMultiselectBtn">Combinar</button>
+            <div class="options">
+                <ul id="optionsUl"></ul>
+            </div>
+            <div class="categories">
+                <a data-category="Hair" aria-label="Cabelo">🎀<small>Cabelo</small></a>
+                <a data-category="Dress" aria-label="Roupas">👗<small>Roupas</small></a>
+                <a data-category="Face" aria-label="Rosto">🙂<small>Rosto</small></a>
+                <a data-category="Shoes" aria-label="Sapatos">👟<small>Sapatos</small></a>
+                <a data-category="Accessory" aria-label="Acessórios">👜<small>Acessórios</small></a>
+            </div>
+        </div>
+
+        <div id="appliedOptions">
+            <ol id="appliedOptionsOl"></ol>
+        </div>
+    </div>
+    
+    
+    <script src="./js/canvas.js"></script>
+    <script id="DragDropTouch" src="./js/DragDropTouch.js"></script>
+</body>
+</html>

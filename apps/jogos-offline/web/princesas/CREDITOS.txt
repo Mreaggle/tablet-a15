@@ -1,0 +1,6 @@
+Guarda-roupa Princesas A15
+Adaptação para Android de Dress Up Princess, por leven-space.
+https://github.com/leven-space/dress-up-princess
+Revisão original 70da834. Veja LICENSE-PRINCESS.txt.
+Foram adaptados o layout, os rótulos, a seleção e a resolução dos recursos.
+O projeto usa React. Veja app.js.LEGAL.txt.
